@@ -1,0 +1,25 @@
+{
+  "name": "pr-summary",
+  "version": "1.0.0",
+  "description": "GitHub Action that auto-summarizes pull requests using Claude AI",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist --minify",
+    "prepare": "npm run build"
+  },
+  "keywords": ["github-actions", "pull-request", "ai", "claude", "code-review"],
+  "author": "Android-Tipster",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Android-Tipster/pr-summary"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.82.0",
+    "@octokit/rest": "^22.0.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4"
+  }
+}

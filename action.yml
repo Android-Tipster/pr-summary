@@ -1,0 +1,16 @@
+name: "PR Summary"
+description: "Automatically summarize pull requests using Claude AI. Posts a comment with what the PR does, key changes, and potential concerns."
+author: "Android-Tipster"
+
+branding:
+  icon: "file-text"
+  color: "orange"
+
+inputs:
+  anthropic-api-key:
+    description: "Your Anthropic API key. Store as a GitHub secret named ANTHROPIC_API_KEY."
+    required: true
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
